@@ -1,16 +1,19 @@
-## Hi there 👋
+# KS LIM
 
-<!--
-**kiansenglim/kiansenglim** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Application System Engineer at ARVOS K.K.
 
-Here are some ideas to get you started:
+## Areas of Interest
+- Business Application Development
+- Database / SQL
+- Python
+- Business Process Automation
+- ERP / System Integration
+- Digital Transformation
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Development Environment
+- Python
+- SQL Server
+- Git / GitHub
+- VS Code
+- Docker
+- Ubuntu
