@@ -15,21 +15,21 @@ pie showData
 
 ## Development Environment
 
-| Category | Tool |
-|-----------|------|
-| Code Editor | Visual Studio Code |
-| Version Control | Git |
-| Git Client | SourceTree |
-| Database Management | SQL Server Management Studio (SSMS) |
-| Database Platform | Microsoft SQL Server |
-| Programming Language | Python |
-| JavaScript Runtime | Node.js LTS |
-| Linux Environment | Ubuntu / WSL |
-| Data Analysis & Prototyping | JupyterLab / Jupyter Notebook |
-| API Development & Testing | Postman |
-| Database Client | DBeaver Community |
-| File Comparison | WinMerge |
-| Diagramming & Documentation | Draw.io |
+| Category | Tool | Reference |
+|-----------|------|-----------|
+| Code Editor | Visual Studio Code ||
+| Version Control | Git ||
+| Git Client | SourceTree ||
+| Database Management | SQL Server Management Studio (SSMS) ||
+| Database Platform | Microsoft SQL Server ||
+| Programming Language | Python ||
+| JavaScript Runtime | Node.js LTS ||
+| Linux Environment | Ubuntu / WSL | ../linux/common-commands.md |
+| Data Analysis & Prototyping | JupyterLab / Jupyter Notebook ||
+| API Development & Testing | Postman ||
+| Database Client | DBeaver Community ||
+| File Comparison | WinMerge ||
+| Diagramming & Documentation | Draw.io ||
 
 ## Areas of Interest
 
