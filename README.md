@@ -24,7 +24,7 @@ pie showData
 | Database Platform | Microsoft SQL Server ||
 | Programming Language | Python ||
 | JavaScript Runtime | Node.js LTS ||
-| Linux Environment | Ubuntu / WSL | ../linux/common-commands.md |
+| Linux Environment | Ubuntu / WSL | [Cheat Sheet](https://github.com/kiansenglim/LINUX_CHEATSHEET) |
 | Data Analysis & Prototyping | JupyterLab / Jupyter Notebook ||
 | API Development & Testing | Postman ||
 | Database Client | DBeaver Community ||
