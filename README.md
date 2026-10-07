@@ -73,6 +73,34 @@ classDef note fill:none,stroke:none,color:#666;
 class N note;
 class CAT2A setColor;
 ```
+```code
+flowchart LR
+
+%% Category 1
+subgraph CAT2["Category 1"]
+
+    subgraph CAT2A["Category 1a"]
+        direction LR
+        a --> b
+    end
+
+    N["Example Note"]
+
+    b --> c
+
+end
+
+%% Category 2
+subgraph CAT3["Category 2"]
+    d --> c
+end
+
+classDef setColor fill:#fce4ec,stroke:#c2185b,color:#000;
+classDef note fill:none,stroke:none,color:#666;
+
+class N note;
+class CAT2A setColor;
+```
 
 #### Common Layout Directions
 
@@ -170,31 +198,3 @@ end
 - Business Process Documentation
 - SQL Server Administration
 - Python Automation
-
-## Notes
-
-### ToshiMAX
-
-- Organize the ToshiMAX applications.
-  - The Procurement Department uses `プロジェクト追跡(2H).xlsm` for reference purposes only and does not perform any data entry.
-
-### CRM Sales Cycle
-
-The CRM opportunity stages are defined as follows:
-
-| Status | Probability (%) |
-|----------|----------:|
-| Won | 100 |
-| (Pre) 先行手配 | 100 |
-| A | 98 |
-| B1 | 95 |
-| B2 | 90 |
-| B3 | 80 |
-| C | 70 |
-| D | 10 |
-| Lost | 0 |
-| Cancel | 0 |
-| Delete | 0 |
-| Case Study | 0 |
-
-These stages
