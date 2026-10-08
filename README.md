@@ -180,6 +180,172 @@ subgraph ANALYSIS["Analysis & Forecasting"]
 
 end
 ```
+---
+
+## VBA Reverse Engineering Techniques
+
+### Inspecting Named SQL Queries
+
+Many ToshiMAX applications store SQL statements inside Excel Named Ranges rather than directly inside VBA code.
+
+For example:
+
+```vb
+rs.Open Range("SQL_OSCO").Value
+```
+
+The actual SQL may not be visible in VBA and may be stored in a worksheet cell referenced by a Named Range.
+
+---
+
+### Useful Immediate Window Commands
+
+While stopped at a breakpoint in VBA (`F9`), use the Immediate Window (`Ctrl + G`) to inspect Named Ranges and SQL definitions.
+
+#### Display SQL Statement
+
+```vb
+? Range("SQL_OSCO").Value
+```
+
+Purpose:
+
+```text
+Displays the actual SQL query stored in the Named Range.
+```
+
+Example:
+
+```sql
+SELECT *
+FROM D_ORECDATA
+...
+```
+
+---
+
+#### Display Worksheet Name
+
+```vb
+? Range("SQL_OSCO").Parent.Name
+```
+
+Purpose:
+
+```text
+Identifies which worksheet contains the Named Range.
+```
+
+Example Output:
+
+```text
+OSC
+```
+
+---
+
+#### Display Cell Address
+
+```vb
+? Range("SQL_OSCO").Address
+```
+
+Purpose:
+
+```text
+Identifies the cell location of the Named Range.
+```
+
+Example Output:
+
+```text
+$S$4
+```
+
+---
+
+#### Display Named Range Definition
+
+```vb
+? ThisWorkbook.Names("SQL_OSCO").RefersTo
+```
+
+Purpose:
+
+```text
+Shows where the Named Range points.
+```
+
+Example Output:
+
+```text
+=OSC!$S$4
+```
+
+---
+
+### Example Investigation Workflow
+
+When analyzing a SQL execution statement:
+
+```vb
+rs.Open Range("SQL_OSCO").Value
+```
+
+Use:
+
+```vb
+? ThisWorkbook.Names("SQL_OSCO").RefersTo
+? Range("SQL_OSCO").Parent.Name
+? Range("SQL_OSCO").Address
+? Range("SQL_OSCO").Value
+```
+
+Result:
+
+```text
+SQL_OSCO
+    ↓
+OSC!S4
+    ↓
+Actual SQL Statement
+```
+
+This allows rapid identification of:
+
+- SQL source location
+- Actual SQL query
+- Worksheet dependencies
+- Data lineage
+- Forecast calculation logic
+
+---
+
+### Why This Is Useful
+
+Many legacy Excel applications use:
+
+```text
+Worksheet Cell
+    ↓
+Named Range
+    ↓
+VBA
+    ↓
+SQL Server
+```
+
+instead of storing SQL directly in VBA.
+
+Understanding this pattern greatly simplifies:
+
+- VBA analysis
+- SQL extraction
+- Business logic discovery
+- Data lineage documentation
+- ERP / CRM migration projects
+
+---
 
 ## Areas of Interest
 
